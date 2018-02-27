@@ -1,5 +1,5 @@
 # One Piece Hangman
-Final Project for Hacktiv0 Phase 0 - Membuat Web App dengan Memanfaatkan DOM
+Final Project for Hacktiv8 Phase0 - Membuat Web App dengan Memanfaatkan DOM
 
 ## How to Play
 LINK ---> https://zenavilenia.github.io/onePieceHangman/index.html
