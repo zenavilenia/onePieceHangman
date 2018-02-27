@@ -43,14 +43,14 @@ window.addEventListener("keydown", function (event) {
 
 function selectNewWord() {
   wordTmp = [];
-  guessLeft = 5;
   guessedWord = [];
-  showWrongGuess.innerHTML = guessedWord;
-  showGuessLeft.innerHTML = guessLeft;
-  showAnswer.style.border = "";
-  showResponse.innerHTML = "";
-  showCharacter.innerHTML = "";
+  guessLeft = 5;
   showAnyKey.innerHTML = "";
+  showResponse.innerHTML = "";
+  showAnswer.style.border = "";
+  showCharacter.innerHTML = "";
+  showGuessLeft.innerHTML = guessLeft;
+  showWrongGuess.innerHTML = guessedWord;
   showHangman.innerHTML = '<img src="assets/images/hangman' + guessLeft + '.png" id="imgHangman">';
   let randomItem = words[Math.floor(Math.random()*words.length)];
   indexWord = words.indexOf(randomItem);
