@@ -45,7 +45,6 @@ function selectNewWord() {
   wordTmp = [];
   guessLeft = 5;
   guessedWord = [];
-
   showWrongGuess.innerHTML = guessedWord;
   showGuessLeft.innerHTML = guessLeft;
   showAnswer.style.border = "";
@@ -53,7 +52,6 @@ function selectNewWord() {
   showCharacter.innerHTML = "";
   showAnyKey.innerHTML = "";
   showHangman.innerHTML = '<img src="assets/images/hangman' + guessLeft + '.png" id="imgHangman">';
-
   let randomItem = words[Math.floor(Math.random()*words.length)];
   indexWord = words.indexOf(randomItem);
   word = words[indexWord].split("");
