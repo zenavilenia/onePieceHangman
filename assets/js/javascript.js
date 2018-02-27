@@ -79,7 +79,7 @@ function selectNewWord() {
     showLetters.innerHTML = alphabet[count];
     // Move to left letter
     showLeft.addEventListener("click", function(){
-        if(guessLeft === 0) {
+        if(guessLeft <= 0) {
           resetMobile();
         }
         if (count == 0) {
@@ -92,7 +92,7 @@ function selectNewWord() {
     });
     // Move to right letter
     showRight.addEventListener("click", function(){
-      if(guessLeft === 0) {
+      if(guessLeft <= 0) {
         resetMobile();
       }
         if (count == 25) {
@@ -105,7 +105,7 @@ function selectNewWord() {
     });
     // Guess letter
     showGuessLetter.addEventListener("click", function(){
-      if(guessLeft === 0) {
+      if(guessLeft <= 0) {
         resetMobile();
       }
       let guess = showLetters.innerHTML;
