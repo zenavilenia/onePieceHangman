@@ -2,7 +2,7 @@
 Final Project for Hacktiv0 Phase 0 - Membuat Web App dengan Memanfaatkan DOM
 
 ## How to Play
-LINK --->
+LINK ---> https://zenavilenia.github.io/onePieceHangman/index.html
 1. Press any letter to make a guess
 2. Try to guess the word before the guesses run out
 
