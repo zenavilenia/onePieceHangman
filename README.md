@@ -11,10 +11,6 @@ LINK ---> https://zenavilenia.github.io/onePieceHangman/index.html
 - CSS (media queries)
 - Javascript (Native)
 
-## How to Play
-1. Press any letter to make a guess
-2. Try to guess the word before the guesses run out
-
 ## Built With
 * Atom
 * GIMP
