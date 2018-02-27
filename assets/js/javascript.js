@@ -79,9 +79,9 @@ function selectNewWord() {
     showLetters.innerHTML = alphabet[count];
     // Move to left letter
     showLeft.addEventListener("click", function(){
-      if(guessLeft === 0) {
-        selectNewWord();
-      } else {
+        if(guessLeft === 0) {
+          resetMobile();
+        }
         if (count == 0) {
           count = 25;
         } else {
@@ -93,8 +93,8 @@ function selectNewWord() {
     // Move to right letter
     showRight.addEventListener("click", function(){
       if(guessLeft === 0) {
-        selectNewWord();
-      } else {
+        resetMobile();
+      }
         if (count == 25) {
           count = 0;
         } else {
@@ -105,10 +105,10 @@ function selectNewWord() {
     });
     // Guess letter
     showGuessLetter.addEventListener("click", function(){
-      let guess = showLetters.innerHTML;
       if(guessLeft === 0) {
-        selectNewWord();
+        resetMobile();
       }
+      let guess = showLetters.innerHTML;
       if(alphabet.indexOf(guess) !== -1) {
         if(word.indexOf(guess) !== -1) {
           changeWord(guess);
@@ -166,4 +166,18 @@ function win() {
 function wrongGuest(key) {
   guessedWord.push(key);
   showWrongGuess.innerHTML = guessedWord.join(" ");
+}
+
+function resetMobile() {
+  // Any key restarts game
+  showLeft.addEventListener("click", function(){
+      selectNewWord();
+  });
+  showRight.addEventListener("click", function(){
+      selectNewWord();
+  });
+  // Listen for press to reset
+  showGuessLetter.addEventListener("click", function(){
+      selectNewWord();
+  });
 }
