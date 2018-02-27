@@ -1,4 +1,4 @@
-let words = ["MONKEY D LUFFY", "RORONOA ZORO", "SANJI", "USOPP", "NAMI", "TONY TONY CHOPPER", "BROOK", "FRANKY", "NICO ROBIN"];
+let words = ["MONKEY D LUFFY", "RORONOA ZORO", "VINSMOKE SANJI", "USOPP", "NAMI", "TONY TONY CHOPPER", "BROOK", "FRANKY", "NICO ROBIN"];
 let word;
 let indexWord = -1;
 let wordTmp = [];
