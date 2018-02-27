@@ -1,4 +1,5 @@
-let words = ["MONKEY D LUFFY", "RORONOA ZORO", "VINSMOKE SANJI", "USOPP", "NAMI", "TONY TONY CHOPPER", "BROOK", "FRANKY", "NICO ROBIN"];
+let words = ["MONKEY D LUFFY", "RORONOA ZORO", "VINSMOKE SANJI", "USOPP", "NAMI",
+            "TONY TONY CHOPPER", "BROOK", "FRANKY", "NICO ROBIN"];
 let word;
 let indexWord = -1;
 let wordTmp = [];
@@ -17,7 +18,6 @@ let showResponse = document.getElementById("response");
 let showCharacter = document.getElementById("character");
 let showAnyKey = document.getElementById("anykey");
 let showHangman = document.getElementById("hangman");
-
 
 window.onload = function() {
   selectNewWord();
@@ -74,9 +74,7 @@ function changeWord(key) {
       wordTmp.splice(i, 1, word[i]);
     }
   }
-
   document.getElementById("wordToGuess").innerHTML = wordTmp.join(" ");
-
   if(wordTmp.indexOf("_") === -1) {
     win();
   }
@@ -86,7 +84,6 @@ function changeGuessLeft() {
   guessLeft--;
   showGuessLeft.innerHTML = guessLeft;
   showHangman.innerHTML = '<img src="assets/images/hangman' + guessLeft + '.png" id="imgHangman">';
-
   if(guessLeft === 0) {
     lose();
   }
