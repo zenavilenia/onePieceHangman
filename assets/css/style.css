@@ -26,6 +26,14 @@ body {
 	border-radius: 20px;
 }
 
+button {
+    background: cyan;
+    border: 2px solid black;
+    border-radius: 5%;
+    padding: 5px;
+    font-size: 24px;
+}
+
 #info {
   float: left;
   position: relative;
@@ -61,7 +69,6 @@ body {
 }
 
 #media-input {
-    margin-bottom: 5vh;
     align: center;
 }
 
