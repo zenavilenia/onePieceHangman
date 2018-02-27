@@ -8,7 +8,7 @@ LINK ---> https://zenavilenia.github.io/onePieceHangman/index.html
 
 ## Technologies used
 - HTML
-- CSS (media queries)
+- CSS
 - Javascript (Native)
 
 ## Built With
