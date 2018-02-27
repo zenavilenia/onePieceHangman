@@ -7,6 +7,7 @@ let alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
 let guessLeft = 5;
 let guessedWord = [];
 let wins = 0;
+let count = 0;
 
 let showGuessLeft = document.getElementById("guess");
 let showWrongGuess = document.getElementById("wrong-guess");
@@ -17,7 +18,7 @@ let showResponse = document.getElementById("response");
 let showCharacter = document.getElementById("character");
 let showAnyKey = document.getElementById("anykey");
 let showHangman = document.getElementById("hangman");
-
+let showMediaInput = document.getElementById("media-input");
 
 window.onload = function() {
   selectNewWord();
@@ -66,6 +67,53 @@ function selectNewWord() {
     }
   }
   showWordtoGuess.innerHTML = wordTmp.join(" ");
+
+  if (window.matchMedia("(max-width: 780px) and (orientation: portrait)").matches) {
+    /* the viewport is less than 640 pixels wide */
+    // Add arrows, letter, and guess
+    showMediaInput.innerHTML = '<button id="left"><</button><div id="letters"></div><button id="right">></button><button id="guessLetter">Guess</button>';
+    // Change directions
+    // document.querySelector(".green").innerHTML = "Press the arrows to change letter!";
+    // Show first letter A
+    let showLetters = document.getElementById("letters");
+    let showLeft = document.getElementById("left");
+    let showRight = document.getElementById("right");
+    let showGuessLetter = document.getElementById("guessLetter");
+
+    showLetters.innerHTML = alphabet[count];
+    // Move to left letter
+    showLeft.addEventListener("click", function(){
+        if (count == 0) {
+        count = 25;
+      } else {
+        count--;
+      }
+      showLetters.innerHTML = alphabet[count];
+    });
+    // Move to right letter
+    showRight.addEventListener("click", function(){
+        if (count == 25) {
+        count = 0;
+      } else {
+        count++;
+      }
+      showLetters.innerHTML = alphabet[count];
+    });
+    // Guess letter
+    showGuessLetter.addEventListener("click", function(){
+      let guess = showLetters.innerHTML;
+      if(alphabet.indexOf(guess) !== -1) {
+        if(word.indexOf(guess) !== -1) {
+          changeWord(guess);
+        } else {
+          if(guessedWord.indexOf(guess) === -1) {
+            wrongGuest(guess);
+            changeGuessLeft();
+          }
+        }
+      }
+    });
+  }
 }
 
 function changeWord(key) {
