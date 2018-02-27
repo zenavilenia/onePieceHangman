@@ -51,6 +51,15 @@ body {
   width: 50%;
 }
 
+#letters {
+    margin: 0 20px;
+    font-size: 36px;
+}
+
+#guessLetter {
+    margin-left: 40px;
+}
+
 #media-input {
     margin-bottom: 5vh;
 }
